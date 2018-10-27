@@ -77,4 +77,13 @@ public class Train
         
         return str;
     }
+    
+    public static void test() {
+        Train test = new Train();
+        Train test2 = new Train("testy", new Time(8, 30), new Time(9, 45), 1000);
+        
+        if(!test2.name.equals("testy")) System.out.println("Should be \"testy\" but was" + test2.name);
+        if(test2.travelTime().getHour() != 1) System.out.println("Traveltime hours should be 1 but was" + test2.travelTime().getHour());
+        if(test2.travelTime().getMinute() != 15) System.out.println("Traveltime minutes should be 15 but was" + test2.travelTime().getMinute());
+    }
 }
