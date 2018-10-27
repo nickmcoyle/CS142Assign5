@@ -1,4 +1,28 @@
 #BlueJ class context
 comment0.target=Train
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Time\ here.\r\n\r\n\ @author\ Nick\ Coyle\r\n\ @version\ 10.29.2018\r\n
-numComments=1
+comment1.params=
+comment1.target=Train()
+comment10.params=
+comment10.target=Time\ travelTime()
+comment10.text=\r\n\ method\ to\ calculate\ the\ amount\ of\ time\ the\ Train\ travelled\r\n\ this\ is\ calculated\ using\ the\ timeBetween()\ method\ of\ the\ Time\ class\r\n
+comment11.params=
+comment11.target=java.lang.String\ toString()
+comment2.params=name\ departure\ arrival\ distance
+comment2.target=Train(java.lang.String,\ Time,\ Time,\ int)
+comment3.params=
+comment3.target=Time\ getDeparture()
+comment4.params=
+comment4.target=Time\ getArrival()
+comment5.params=
+comment5.target=int\ getDistance()
+comment6.params=departure
+comment6.target=void\ setDeparture(Time)
+comment7.params=arrival
+comment7.target=void\ setArrival(Time)
+comment8.params=distance
+comment8.target=void\ setDistance(int)
+comment9.params=
+comment9.target=int\ averageSpeed()
+comment9.text=\r\n\ method\ to\ calculate\ the\ average\ speed\ a\ Train\ travelled\ using\ the\ distance\ and\ total\ time\ of\ travel\r\n\ this\ is\ calculated\ using\ the\ formula\ distance\ \=\ rate*time\r\n
+numComments=12

@@ -1,4 +1,24 @@
 #BlueJ class context
 comment0.target=Time
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Time\ here.\r\n\r\n\ @author\ Nick\ Coyle\r\n\ @version\ 10.29.2018\r\n
-numComments=1
+comment1.params=
+comment1.target=Time()
+comment2.params=hour\ minute
+comment2.target=Time(int,\ int)
+comment3.params=
+comment3.target=int\ getHour()
+comment4.params=
+comment4.target=int\ getMinute()
+comment5.params=hour
+comment5.target=void\ setHour(int)
+comment6.params=minute
+comment6.target=void\ setMinute(int)
+comment7.params=other
+comment7.target=Time\ timeBetween(Time)
+comment7.text=\r\n\ method\ to\ calculate\ the\ amount\ of\ hour\ and\ minutes\ difference\ between\ two\ times\r\n\ \r\n\ @param\ Time\ other\ is\ the\ Time\ object\ that\ we\ will\ be\ comparing\ the\ current\ Time\ object\ to\r\n
+comment8.params=timePart
+comment8.target=java.lang.String\ zeroTime(int)
+comment8.text=\r\n\ method\ to\ format\ the\ hour\ or\ minute\ component\ of\ a\ Time\ object\ to\ make\ it\ display\ better\r\n\ \r\n\ @param\ int\ timePart\ is\ the\ hour\ or\ minute\ we\ will\ format\r\n
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10
