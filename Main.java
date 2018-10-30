@@ -7,8 +7,11 @@
  */
 public class Main
 {
-    public static void main(String[] args) {
-        System.out.println("Trains app");
+    public static void main(String[] args) {             
+        
+        Train nightExpress = new Train("Night Express", new Time(23,55), new Time(8,15), 650);
+        System.out.println(nightExpress);
+        
         Time.test();
         Train.test();
     }

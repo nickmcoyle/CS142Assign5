@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Train
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Time\ here.\r\n\r\n\ @author\ Nick\ Coyle\r\n\ @version\ 10.29.2018\r\n
+comment0.text=\r\n\ Train\ class\ models\ a\ train\ with\ its\ name,\ traveltime,\ distance,\ and\ the\ time\ it\ leaves\ and\ arrives\r\n\r\n\ @author\ Nick\ Coyle\r\n\ @version\ 10.29.2018\r\n
 comment1.params=
 comment1.target=Train()
 comment10.params=

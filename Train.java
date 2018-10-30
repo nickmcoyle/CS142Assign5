@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Time here.
+ * Train class models a train with its name, traveltime, distance, and the time it leaves and arrives
  *
  * @author Nick Coyle
  * @version 10.29.2018
@@ -11,6 +11,8 @@ public class Train
     private Time departure;
     private Time arrival;
     private int distance;
+    private Time travelTime;
+    private int speed;
 
     Train() {
         this("", new Time(), new Time(), 0);
@@ -20,7 +22,9 @@ public class Train
         this.name = name;
         this.departure = departure;
         this.arrival = arrival;
-        this.distance = distance;
+        this.distance = distance;        
+        this.travelTime = travelTime();
+        this.speed = averageSpeed();
     }
 
     public Time getDeparture () {
@@ -54,9 +58,10 @@ public class Train
     public int averageSpeed() {
         //distance = rate * time
         //rate = distance / time;
-        Time travelTime = travelTime();
         double hours = travelTime.getHour() + (double)travelTime.getMinute()/60;
-        return (int)(distance / hours);
+        int speed = (int)(distance / hours);
+        
+        return speed;
     }
 
     /**
@@ -72,8 +77,8 @@ public class Train
         String str = name + "\n";
         str += "Departure             " + departure + "\n";
         str += "Arrival               " + arrival + "\n";
-        str += "Travel Time           " + travelTime() + "\n";
-        str += "Average Speed         " + averageSpeed() + "km/h" + "\n";
+        str += "Travel Time           " + travelTime + "\n";
+        str += "Average Speed         " + speed + "km/h" + "\n";
         
         return str;
     }
@@ -82,8 +87,15 @@ public class Train
         Train test = new Train();
         Train test2 = new Train("testy", new Time(8, 30), new Time(9, 45), 1000);
         
-        if(!test2.name.equals("testy")) System.out.println("Should be \"testy\" but was" + test2.name);
-        if(test2.travelTime().getHour() != 1) System.out.println("Traveltime hours should be 1 but was" + test2.travelTime().getHour());
-        if(test2.travelTime().getMinute() != 15) System.out.println("Traveltime minutes should be 15 but was" + test2.travelTime().getMinute());
+        if(!test2.name.equals("testy")) System.out.println("Should be \"testy\" but was " + test2.name);
+        if(test2.travelTime().getHour() != 1) System.out.println("Traveltime hours should be 1 but was " + test2.travelTime().getHour());
+        if(test2.travelTime().getMinute() != 15) System.out.println("Traveltime minutes should be 15 but was " + test2.travelTime().getMinute());
+        if(test2.averageSpeed() != 800) System.out.println("Test train average speed should be 800km/h but was " + test2.averageSpeed());
+        
+        Train nightExpress = new Train("Night Express", new Time(23,55), new Time(8,15), 650);
+        if(!nightExpress.name.equals("Night Express")) System.out.println("nightExpress name should be \"Night Express\" but was " + nightExpress.name);
+        if(nightExpress.travelTime().getHour() != 8) System.out.println("nightExpress traveltime hours should be 8 but was " + nightExpress.travelTime.getHour());
+        if(nightExpress.travelTime().getMinute() != 20) System.out.println("nightExpress traveltime minutes should be 20 but was " + nightExpress.travelTime.getMinute());
+        if(nightExpress.averageSpeed() != 78) System.out.println("nightExpress train average speed should be 78km/h but was " + nightExpress.speed);
     }
 }
