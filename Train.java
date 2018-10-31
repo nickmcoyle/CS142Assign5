@@ -58,8 +58,8 @@ public class Train
     public int averageSpeed() {
         //distance = rate * time
         //rate = distance / time;
-        double hours = travelTime.getHour() + (double)travelTime.getMinute()/60;
-        int speed = (int)(distance / hours);
+        double minutes = (travelTime.getHour() * 60) + travelTime.getMinute();
+        int speed = (int)(distance / (minutes / 60));
         
         return speed;
     }
