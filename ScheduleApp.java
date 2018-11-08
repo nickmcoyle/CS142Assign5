@@ -67,7 +67,7 @@ public class ScheduleApp extends JFrame
         menuBar.add(menuFile);
 
         setJMenuBar(menuBar);
-            
+
         textArea = new JTextArea();
         textArea.setColumns(40);
         textArea.setBounds(0, 0, getWidth(),getHeight()-20);
@@ -79,14 +79,14 @@ public class ScheduleApp extends JFrame
         font = new Font("TimesRoman", Font.PLAIN, 12);
         textArea.setFont(font);
         panel.add(textArea);
-        
+
         //Add JScrollPane 
         JScrollPane areaScrollPane = new JScrollPane(textArea);
         areaScrollPane.setBounds(10, 0, getWidth()-14,getHeight()-20);
         areaScrollPane.setVerticalScrollBarPolicy(
             ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         panel.add(areaScrollPane);
-            
+
         this.validate();
         this.setVisible(true);
         this.toFront();
@@ -105,7 +105,7 @@ public class ScheduleApp extends JFrame
                 schedule = new Schedule(fileName);
                 schedule.sortDeparture();
                 textArea.append(schedule.toString());
-                textArea.append("The faster train:\n");
+                textArea.append("The fastest train:\n");
                 textArea.append(schedule.fastestTrain().toString() + "\n");
             }
             catch(IOException ex)
@@ -114,8 +114,8 @@ public class ScheduleApp extends JFrame
             }
         }
     }
-    
+
     public static void main(String[] args)throws IOException{
-       ScheduleApp myWindow = new ScheduleApp();
-   }
+        ScheduleApp myWindow = new ScheduleApp();
+    }
 }

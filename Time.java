@@ -12,21 +12,36 @@ public class Time
     
     Time() {
         this(0,0);
-    }
-    
+    }    
+   
     Time(int hour, int minute) {
         setHour(hour);
         setMinute(minute);
     }
 
+    /**
+     * A method to get the hour value of the time.
+     * 
+     * @return int the hour
+     */
     public int getHour() {
         return hour;
     }
 
+    /**
+     * A method to get the minute value of the time.
+     * 
+     * @return int the minute
+     */
     public int getMinute() {
         return minute;
     }
 
+    /**
+     * A method to set the hour value of the time.
+     * 
+     * @params hour:int the hour value
+     */
     public void setHour(int hour) {
         if(hour < 0 && hour > 23) {
             throw new IllegalArgumentException("Hour must be between 0 and 23 inclusive");
@@ -35,6 +50,11 @@ public class Time
         this.hour = hour;
     }
 
+    /**
+     * A method to set the minute value of the time.
+     * 
+     * @params minute:int the minute value
+     */
     public void setMinute(int minute) {
         if(hour < 0 && hour > 60) {
             throw new IllegalArgumentException("Minute must be between 0 and 60 inclusive");
@@ -43,7 +63,7 @@ public class Time
         this.minute = minute;
     }    
 
-    /*
+    /**
      * method to calculate the amount of hour and minutes difference between two times
      * 
      * @param Time other is the Time object that we will be comparing the current Time object to
@@ -64,7 +84,7 @@ public class Time
         return new Time(hours, minutes);
     }
 
-    /*
+    /**
      * method to format the hour or minute component of a Time object to make it display better
      * 
      * @param int timePart is the hour or minute we will format
@@ -79,6 +99,11 @@ public class Time
         return timeString;
     }
 
+     /**
+     * A method to save the time to a String
+     * 
+     * @return Returns a String with our formatted text
+     */
     @Override
     public String toString() {
         return new String(zeroTime(hour) + ":" + zeroTime(minute));
