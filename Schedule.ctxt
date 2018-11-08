@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Schedule
+comment0.text=\r\n\ Schedule\ class\ reads\ a\ text\ file\ that\ contains\ the\ train\ schedule\ and\ stores\ the\ schedule\ into\ an\ array\ of\ our\ Train\ model\r\n\r\n\ @author\ Nick\ Coyle\r\n\ @version\ 11.7.2018\r\n
+comment1.params=fileName
+comment1.target=Schedule(java.lang.String)
+comment2.params=fileName
+comment2.target=void\ fillArray(java.lang.String)
+comment3.params=
+comment3.target=Train\ fastestTrain()
+comment4.params=
+comment4.target=void\ sortDeparture()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
